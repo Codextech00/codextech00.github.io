@@ -1,0 +1,6 @@
+{
+  "name": "CBSE Class 10 Portal (2026-27) - VidyaSetu",
+  "description": "Comprehensive CBSE Class 10 Portal for 2026-27 session featuring infinite Science & Math quizzes, sample papers, chapter notes, educational puzzles, student dashboard, and admin control.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
