@@ -5,6 +5,8 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    // Relative base path ensures GitHub Pages (e.g. /PANINI-ACADMEY/) loads assets correctly instead of 404 blank screen
+    base: './',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
