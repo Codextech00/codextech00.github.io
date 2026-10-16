@@ -60,6 +60,10 @@ class RootErrorBoundary extends Component<Props, State> {
   }
 }
 
+if (typeof window !== 'undefined') {
+  (window as any).__VITE_APP_LOADED__ = true;
+}
+
 createRoot(document.getElementById('root')!).render(
   <RootErrorBoundary>
     <App />

@@ -12,9 +12,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" crossorigin href="./assets/index.css">
   </head>
   <body class="bg-slate-950 text-slate-100 antialiased font-sans selection:bg-indigo-500 selection:text-white">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script type="module">
+      // Universal fail-safe for static hosts (e.g. GitHub Pages deploying from main / root)
+      if (!window.__VITE_APP_LOADED__) {
+        setTimeout(function() {
+          if (!window.__VITE_APP_LOADED__) {
+            var fallbackScript = document.createElement('script');
+            fallbackScript.type = 'module';
+            fallbackScript.crossOrigin = 'anonymous';
+            fallbackScript.src = './assets/index.js';
+            document.body.appendChild(fallbackScript);
+          }
+        }, 150);
+      }
+    </script>
   </body>
 </html>
